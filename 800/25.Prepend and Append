@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n;
+	    cin>>n;
+	    string arr;
+        cin>>arr;
+	    int l=0,r=n-1,ans=n;
+	    while(arr[l]!=arr[r] && ans>0)
+	    {
+	           ans=ans-2;
+               l++;
+               r--;
+	    }
+        cout<<ans<<endl;
+	}
+}
