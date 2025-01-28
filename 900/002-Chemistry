@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+void solve() {
+   int n,k;
+   cin>>n>>k;
+   string s;
+   cin>>s;
+   unordered_map<char,int>mp;
+   for(auto cc:s)
+   {
+      mp[cc]++;
+   }
+   int c=0;
+   for(auto en:mp)
+   {
+    if(en.second % 2!=0)
+    {
+        c++;
+    }
+   }
+   if(c>k+1)
+   {
+     cout<<"No"<<endl;
+   }
+   else{
+     cout<<"Yes"<<endl;
+   }
+}
+
+int main() {
+    int t = 0;
+    cin >> t;
+    while (t--) solve();
+    return 0;
+}
