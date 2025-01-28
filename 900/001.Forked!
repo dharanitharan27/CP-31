@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int dir1[4] = {-1, 1, -1, 1}, dy[4] = {-1, -1, 1, 1};
+
+void solve() {
+    int a, b;
+    cin >> a >> b;
+    int x1, y1, x2, y2;
+    cin >> x1 >> y1 >> x2 >> y2;
+
+    set<pair<int, int>> s1, s2;
+
+    for (int j = 0; j < 4; j++) {
+        s1.insert({x1 + dir1[j] * a, y1 + dy[j] * b});
+        s2.insert({x2 + dir1[j] * a, y2 + dy[j] * b});
+        s1.insert({x1 + dir1[j] * b, y1 + dy[j] * a});
+        s2.insert({x2 + dir1[j] * b, y2 + dy[j] * a});
+    }
+
+    int ans = 0;
+    for (const auto &ele : s1) {
+        if (s2.find(ele) != s2.end()) {
+            ans++;
+        }
+    }
+
+    cout << ans << endl;
+}
+
+int main() {
+    int t = 0;
+    cin >> t;
+    while (t--) solve();
+    return 0;
+}
