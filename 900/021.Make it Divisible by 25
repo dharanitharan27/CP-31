@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+const vector<string> subseqs = { "00", "25", "50", "75" };
+const int INF = 10000;
+int solve(const string& s, const string& t) {
+    int sptr = s.length() - 1, ans = 0;
+    bool found_last = false;
+
+    while (sptr >= 0) {
+        if (!found_last && s[sptr] == t[1]) {
+            found_last = true;  // Found the last digit
+        } 
+        else if (found_last && s[sptr] == t[0]) {
+            return ans;  // Found both digits
+        }
+        sptr--;
+        ans++;
+    }
+
+    return INF;
+}
+
+int main() {
+    int t;
+    cin >> t;
+
+    while (t--) {
+        string n;
+        cin >> n;
+        int ans = INF;
+        for (const auto& e : subseqs)
+            ans = min(ans, solve(n, e));
+        cout << ans-1<< '\n';
+    }
+}
