@@ -1,0 +1,44 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+        cin>>n;
+        vector<int>arr(n);
+        bool haszero=false;int l=-1,r=-1;
+        for(int i=0;i<n;i++)
+        {
+            cin>>arr[i];   
+            if(arr[i]==0)
+            {
+                haszero=true;
+            }
+            else{
+                  if(l==-1) l=i;
+                  r=i;
+            }
+        }
+        if(l==-1 && r==-1)
+        {
+            cout<<0<<endl;
+            continue;
+        }
+        bool a=false;
+        for(int i=l;i<=r;i++)
+        {
+           if(arr[i]==0)
+           {
+              a=true;
+              break;
+            }
+        }
+        if(a)
+        cout<<2<<endl;
+        else
+        cout<<1<<endl;
+    }
+}
