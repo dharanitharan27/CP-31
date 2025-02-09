@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+long long maps(long long n) { 
+    if (n % 4 == 0) return 0;
+    if (n % 4 == 1) return n;
+    if (n % 4 == 2) return -1;
+    return -n - 1;
+}
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        long long x1, n;
+        cin >> x1 >> n;
+        long long d = maps(n);
+        cout << (x1 % 2 == 0 ? x1 - d : x1 + d) << '\n';
+    }
+    return 0;
+}
