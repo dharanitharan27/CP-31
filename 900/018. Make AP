@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        long long a, b, c;
+        cin >> a >> b >> c;
+        bool res = false;
+        if ((2 * b - c) % a == 0 && (2 * b - c) / a > 0)
+        {
+            res = true;
+        }
+        if ((a + c) % (2 * b) == 0)
+        {
+            res = true;
+        }
+        if ((2 * b - a) % c == 0 && (2 * b - a) / c > 0) {
+            res = true;
+        }
+        if (res)
+            cout << "Yes" << endl;
+        else
+            cout << "No" << endl;
+
+    }
+}
