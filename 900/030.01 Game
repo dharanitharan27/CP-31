@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+void solve() {
+    string s;
+	cin>>s;
+	int n=s.length();
+	int c1=0,c0=0;
+    for(int i=0;i<n;i++)
+	{
+		if(s[i]=='0')
+		  c0++;
+		else
+		  c1++;
+	}
+	if(min(c0,c1)%2 !=0)
+	  cout<<"DA"<<endl;
+	else
+	   cout<<"NET"<<endl;
+}
+
+int main() {
+    ll t;
+    cin >> t;                
+    while (t--) {
+        solve();             
+    }
+}
