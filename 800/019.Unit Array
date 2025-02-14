@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define nl '\n'
+#define vi vector<int>
+#define odd(x) ((x) % 2 != 0)
+int main() 
+{
+    int t;
+    cin >> t;
+    while (t--) 
+    {
+        int n;
+        cin >> n;
+        vi arr(n);
+        int f1 = 0, f2 = 0;
+        for (int i = 0; i < n; i++) {
+            cin >> arr[i];
+            if (arr[i] == -1) 
+                f1++;
+            else
+                f2++;
+        }
+    
+        // 1. sum ≥ 0
+        // 2. product = 1
+    
+        if (f1 < f2) {
+            // First condition is satisfied
+            if (odd(f1))
+                cout << 1 << nl;
+            else
+                cout << 0 << nl;
+        } else {
+            // f1 > f2
+            // First condition is violated
+            int ops = f1 - (n / 2);  // Fixed incorrect `f1n/2`
+            // Now first condition is satisfied
+            if (odd(n / 2))
+                ops += 1;
+            cout << ops << nl;
+        }
+    }
+}
