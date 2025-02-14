@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define len(x) int((x).size())
+#define vi vector<int>
+void solve(){
+	int n,k;
+	cin>>n>>k;
+ 
+	vi arr(n*k);
+	for(int i=0; i<len(arr); i++)
+		cin>>arr[i];
+	ll ans = 0;
+	int i=n*k;
+	while(k--){
+		i = i - (n/2 + 1);
+		ans += arr[i];
+	}
+	cout<<ans<<endl;
+ 
+}
+
+int main(){
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	int t;
+	cin>>t;
+	while(t--)
+		solve();
+}
