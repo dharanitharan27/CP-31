@@ -29,3 +29,8 @@ int main() {
         }
     }
 }
+Note 
+  simply check that 
+     Considering an array a  of n  (n≥2) positive integers, the following inequality holds for 2≤i≤n :
+                 gcd(a1,a2,⋯,ai)≤gcd(a1,a2)≤2
+     return Yes otherwise No.
