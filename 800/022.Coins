@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int t;
+    cin >> t;  
+    while (t--) {
+        long long n, k;  
+        cin >> n >> k;
+        bool found = false;  
+        for (int x = 0; x < 2; ++x) {  
+            if (n - x * k >= 0 && (n - x * k) % 2 == 0) {
+                cout << "YES" << endl;
+                found = true;
+                break;
+            }
+        }
+        if (!found) {  
+            cout << "NO" << endl;
+        }
+    }
+}
+Note
+1. Understanding the Key Property
+    Any two coins of denomination k can be replaced with k coins of denomination 2.
+    This means that if a solution exists, then we can always construct it using at most one coin of denomination k.
+    Therefore, we only need to check two cases:
+    Using 0 coins of denomination k
+    Using 1 coin of denomination k
+2. Iterating Over Possible Uses of k
+    The loop runs for 20 and 1, where represents the number of times we use a k-denomination coin.
+    For each z, the remaining value that needs to be formed using only 2-denomination coins is:
+    remainingn-xxk
+    If this remaining value is non-negative and even, then it can be fully formed using 2-denomination coins.
+3. Checking the Conditions
+    If (nxxk) is non-negative and even, print "YES" and exit the loop.
+    If neither 20 nor 1 satisfies the condition, print "NO".
