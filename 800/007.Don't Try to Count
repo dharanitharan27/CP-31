@@ -23,3 +23,8 @@ int main(){
             cout<<"-1"<<endl;
         }
 }
+Note
+    Note that the answer is always not greater than 5.When n=1, m=25, the answer is 
+either 5 or −1, it is easy to see that the answer cannot be greater.This allows us to 
+simply iterate over the number of operations, each time checking if s occurs in  x then 
+print i(no of op) otherwise append itself.
