@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+`#include <bits/stdc++.h>
 using namespace std;
 #define nl '\n'
 #define vi vector<int>
@@ -41,3 +41,10 @@ int main()
         }
     }
 }
+Note
+    1.The array is good if its sum is ≥ 0 and its product is 1.
+    2.Count occurrences of -1 (f1) and 1 (f2).
+    3.If f1 < f2, the sum is already non-negative, so we only adjust f1 if it’s odd.
+    4.If f1 > f2, we convert enough -1s to 1s to balance the sum and ensure the product remains 1.
+    5.The number of operations needed is computed accordingly and printed.
+This ensures we make the array good with the minimum operations.
