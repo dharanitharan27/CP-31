@@ -20,3 +20,5 @@ int main()
       }
     }
 }
+//Note
+Simply, we need to check if the array is already sorted. If not, we need two moves to swap numbers, so k≥2.
