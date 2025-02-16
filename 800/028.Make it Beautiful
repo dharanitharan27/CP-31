@@ -28,3 +28,7 @@ int main()
         }
     }
 }
+Note
+  If all elements are the same, print "NO" (can't reorder to be beautiful).
+  Otherwise, print "YES", move the largest element to the front, and print the rest.
+  This ensures no element equals the sum of previous elements, making the array "beautiful". ✅
