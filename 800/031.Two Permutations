@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+void solve() {
+    int t;
+    cin >> t; 
+    while (t--) {
+        int n, a, b;
+        cin >> n >> a >> b;
+        if (a + b <=n-2 || a==b && b==n) {
+            cout << "Yes" << endl;
+        } else {
+            cout << "No" << endl;
+        }
+    }
+}
+
+int main() {
+    solve();
+    return 0;
+}
+Note
+     If a+b+2≤n, we can always find such pair, here is a possible construction:
+ 
+              A={1,2,⋯,a,  n−b,a+1,a+2,⋯,n−b−1,  n−b+1,n−b+2,⋯,n}
+              B={1,2,⋯,a,  a+1,a+2,⋯,n−b−1,n−b,  n−b+1,n−b+2,⋯,n}
+
+The red(first) part is their longest common prefix, and the blue(last) part is their longest common suffix.
+Otherwise, the two permutations must be equal, so such pair exists if a=b=n.
