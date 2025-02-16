@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    for(int i=0;i<t;i++)
+    {
+        int n;
+        cin>>n;
+        vector<int>a(n);
+        for(int i=0;i<n;i++)
+        {
+            cin>>a[i];
+        }
+        int ans=0;
+        for(int i=0;i+1<n;i++)
+        {
+            ans+=(!( (a[i]^a[i+1]) & 1));
+        }
+        cout<<ans<<endl;
+    }
+}
+Note
+           what is ans+=(!( (a[i]^a[i+1]) & 1)) ?
+   
+a[i] ^ a[i+1] (Bitwise XOR)
+        This checks if a[i] and a[i+1] have the same parity (both even or both odd).
+        If a[i] and a[i+1] are different in parity, XOR gives 1.
+        If they are same in parity, XOR gives 0.
+(a[i] ^ a[i+1]) & 1 (Check LSB - Least Significant Bit)
+    The & 1 operation extracts the last bit (odd/even check).    
+    Result 1 → Different parity
+    Result 0 → Same parity
+!(...) (Negation)
+    If 0 (same parity), !0 → 1, so ans increases.
+    If 1 (different parity), !1 → 0, so ans remains unchanged.
+Final Effect
+It counts the number of adjacent pairs (a[i], a[i+1]) that have the same parity. ✅
