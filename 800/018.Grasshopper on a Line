@@ -17,4 +17,7 @@ int main() {
     }
     return 0;
 }
-
+Note
+     When x  is not divisible by k , the grasshopper can reach x  in just one jump.
+Otherwise, you can show that two jumps are always enough. For example, jumps 1  and x−1. 
+1 is not divisible by any k>1 . Also, x  and x−1  can't be divisible by any k>1  at the same time.
