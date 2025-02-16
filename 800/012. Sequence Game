@@ -29,3 +29,5 @@ int main() {
         cout << endl;
     }
 }
+Note
+  first we add 0-index elment.then check arr[i-1]<arr[i] then add arr[i] else add 1.Finally print size and array element.
