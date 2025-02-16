@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;cin>>t;
+    while(t--)
+    {
+        int n;cin>>n;
+        int cnt=0;
+        for(int i=0;i<n;i++)
+        {
+            int x;cin>>x;
+            if(x%2!=0)cnt++;
+        }
+        if(cnt%2==0)cout<<"YES\n";
+        else cout<<"NO\n";
+    }
+}
+Note
+  Let's analyze the impact of adding odd or even numbers to a set with sum S:
+
+      1.If you add an even element to the set, the parity of S  remains unchanged.
+      2.If you add an odd element to the set, the parity of S  changes.
+
+Based on this observation, let's focus on the coloring of odd elements in the array. The number of odd elements colored in blue 
+and the number of odd elements colored in red must have the same parity for a valid coloring. This is because we need to divide the odd elements into two parts (blue and red).
+To achieve the same parity for both blue and red odd elements, the total number of odd elements in the array must be even.
+If it is not even, we won't be able to create two sets with the same parity.
+Hence, the answer is "YES" if the number of odd elements in the array is even, and "NO" otherwise.
