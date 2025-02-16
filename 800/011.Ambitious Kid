@@ -12,3 +12,6 @@ int main(){
         int res=*min_element(arr,arr+n);
         cout<<res<<endl;
 }
+Note
+  abs=>Returns the absolute value of given number as integer.
+simply find min for given array.
