@@ -24,3 +24,8 @@ int main() {
         cout<<max(ans,c)<<endl;   
     }
 }
+Note
+  We can iterate through the array a  and keep track of the length of the current blank space. Whenever we encounter  0 ,
+we increase the length of the current blank space, and whenever we encounter a 1 , we check if the current blank space 
+is longer than the previous longest blank space. If it is, we update the length of the longest blank space.
+Finally, we return the length of the longest blank space.
