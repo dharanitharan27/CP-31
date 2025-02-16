@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+       int n;
+       cin>>n;
+       int a[n];
+       int sum=0;
+       for(int i=0;i<n-1;i++)
+       {
+          cin>>a[i];
+          sum=sum+a[i];
+       }
+       cout<<-sum<<endl;
+    }
+}
+Note
+  Notice that each goal increases the efficiency of the team that scores by 1. But it also simultaneously decreases
+the efficiency of the opposite team by 1. This means, if we maintain the sum of efficiency for all teams, each goal 
+does not change the sum. Therefore, the sum must be 0 .
+
+In order to make the sum to be 0, the efficiency of the missing team must be equal to the sum of efficiency of the
+other n−1 teams, multiplied by −1.
