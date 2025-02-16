@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+      int n,k;
+      cin>>n>>k;
+      int arr[n];
+      int pre=0,ans=0;
+      for(int i=0;i<n;i++){
+        cin>>arr[i];
+        ans=max(ans,arr[i]-pre);
+        pre=arr[i];
+      }
+      ans=max(ans,2*(k-pre));
+      cout<<ans<<endl;
+      
+    }
+}
+Note
+  Let the volume be V, then all the following inequalities (which correspond to the ability to travel from the current gas station,
+having a full tank, to the next one) must be met: a1−0≤V , a2−a1≤V , ..., an−an−1≤V , and 2(x−an)≤V(the multiplier 2 because there is
+no gas station at x, and we have to go from an to x and back without refueling). If all these conditions hold, then V can be the answer.
+Finamlly=>max(a1,a2−a1,…,an−an−1,2(x−an))
