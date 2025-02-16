@@ -24,3 +24,6 @@ int main()
       }
     }
 }
+Note
+    Simply count the frequency of 𝑘.If the occurrence of 𝑘 is more than 1, print it.
+From the test case, only the 𝑘 element occurs more than one time.
