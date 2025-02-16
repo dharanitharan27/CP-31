@@ -1,0 +1,42 @@
+#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+ 
+void solve() {
+	int a,b,c;
+    cin>>a>>b>>c;
+    if(c%2==0)
+    {
+        if(a>b)
+        {
+            cout<<"First"<<endl;
+        }
+        else{
+            cout<<"Second"<<endl;
+        }
+    }
+    else
+    {
+        if(b>a)
+        {
+            cout<<"Second"<<endl;
+        }
+        else{
+            cout<<"First"<<endl;
+        }
+    }
+}
+ 
+int main() {
+	int t = 0; cin >> t;
+	while (t--) solve();
+	return 0;
+}
+Note
+       On each turn, the current player gets rid of one of the buttons available to them. At the same time, if you press the "common" button,
+the enemy will not be able to press it as well. Since each player wants to leave their opponent without buttons to press before they 
+run out of those themselves, they will click on the "common" buttons as long as there is at least one available.
+The number of the player who clicks on their (not the general) button first depends on c. 
+It can be noticed that this player will win if and only if they have strictly 
+more buttons than their opponent.
