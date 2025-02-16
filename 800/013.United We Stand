@@ -25,4 +25,7 @@ int main() {
 	int t = 0; cin >> t;
 	while (t--) solve();
 	return 0;
-}
+}  
+Note
+       Sort the array, then check if all elements are the same. If yes, print -1.
+Otherwise, split it into two groups: one group consists of arr[0] (the lowest element), and the other contains the remaining elements.
