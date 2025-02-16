@@ -24,3 +24,7 @@ int main(){
        cout<<result<<endl;
     }
 }
+Note
+     If there are 3 consecutive empty cells i−1, i, i+1, we can place water in cells i−1 and i+1 and then move
+water from cell i to all other cells. If there are no such cells, we have to place water on every empty cell.
+So if we find substring ''...'' in the array, the answer is 2, otherwise the answer is the number of empty cells
