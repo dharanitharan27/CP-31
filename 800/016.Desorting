@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int t;
+	cin>>t;
+	while(t--)
+  	{
+  		int n;
+  		cin>>n;
+  		vector<int>a(n);
+  		for(int i=0;i<n;i++)
+  		{
+                    cin>>a[i];
+  		}
+  		bool sorted=true;int diff=1e9;
+  		for(int i=0;i<n;i++)
+               {
+  		    if(i>0)
+                    {
+                        diff=min(a[i]-a[i-1],diff);
+                        if(a[i]<a[i-1])
+  		       sorted &= a[i] >= a[i - 1];
+  	            }  
+  		}
+  		if(!sorted)
+                {
+  			cout<<0<<endl;
+  			continue;
+  		}
+  		cout<<(diff/2)+1<<endl;
+  	}
+}
+Note
+   To make the array not sorted, we need at least one index i where a[i] > a[i+1].
+ 	One operation decreases the gap between adjacent elements by 2.
+	The optimal approach is to target the smallest adjacent difference.
+	The required operations to make x > y for adjacent elements (x, y) is:
+			(min difference/2)+1
+
+        If the array is already not sorted, print 0. Otherwise, compute the result using the above formula.
