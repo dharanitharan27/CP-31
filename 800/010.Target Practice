@@ -34,3 +34,5 @@ int main()
       cout<<sum<<endl;
     }
 }
+Note
+ Simply create a score matrix and add values accordingly for the given data.
