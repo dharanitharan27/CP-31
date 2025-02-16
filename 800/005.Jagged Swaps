@@ -21,3 +21,6 @@ int main()
       }
     }
 }
+Note 
+  In question given that start swap from index i=1 so we can't swap at index i=0.
+so check a[0]=1 (for sort) then print yes ,otherwise No.
