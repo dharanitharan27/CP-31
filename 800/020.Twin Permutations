@@ -16,3 +16,12 @@ int main() {
         cout<<endl;   
     }
 }
+Note
+        Since ai+bi≤a(i+1)+b(i+1) , then ai+bi  can be equal to a(i+1)+b(i+1).
+Therefore, any permutation b  which satisfies a1+b1=a2+b2=…=an+bn  is a valid answer.
+If bi=n+1−ai,
+then:
+     b is a permutation;
+     a1+b1=a2+b2=…=an+bn=n+1
+
+Consequently, b=[n+1−a1,n+1−a2,…,n+1−ai,…,n+1−an]  is a valid answer.
