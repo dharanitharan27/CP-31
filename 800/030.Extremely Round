@@ -20,3 +20,9 @@ int main() {
         cout << countExtremelyRound(n) << endl;
     }
 }
+Note
+    This code counts the number of "d" digits (1-9) appearing as a standalone number, repeated with powers of 10 up to n.
+    Loop over digits d = 1 to 9.
+    Multiply d by 10 repeatedly (d, d0, d00, ...) until it exceeds n.
+    Increment count for each valid number.
+👉 Counts all numbers like 1, 10, 100... 9, 90, 900 ≤ n. ✅
