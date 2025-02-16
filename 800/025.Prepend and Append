@@ -19,3 +19,6 @@ int main() {
         cout<<ans<<endl;
 	}
 }
+Note 
+  simply check first and last char if it is different then remove it so ans is reduce by(remove 2 char).
+finally return ans.
