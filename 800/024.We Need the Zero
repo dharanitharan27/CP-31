@@ -30,3 +30,8 @@ int main()
         }
     }
 }
+Note
+  Note that (a1+x) + (a2 + x)... equals a1+a2... an if n is even, or a1+a2... an + x if n is odd. Then, if the length of the array is odd,
+you must print of the whole array. And if the length is even, we can't change the value of the expression with our operation. 
+It turns out that if of the whole array is 0, we can output any number, but otherwise there is no answer.
+where + => xor.
