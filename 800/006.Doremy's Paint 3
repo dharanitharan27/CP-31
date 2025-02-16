@@ -24,3 +24,10 @@ int main(){
             }
         }
 }
+Note
+         From problem says b1+b2=b2+b3=…=bn−1+bn=k.Let's write it as bi+b(i+1)=b(i+1)+b(i+2).
+This is just bi=b(i+2), which means the positions with the same parity should contain same value.
+
+                                 b1=b3=b5=⋯    b2=b4=b6=⋯
+We know that there are ⌈n/2⌉ odd numbers and ⌊n/2⌋ even numbers in [1,n]. Therefore, if and only if we can find ⌊n/2⌋
+same numbers, and the remaining are also the same numbers, the answer is YES.otherwise No.
