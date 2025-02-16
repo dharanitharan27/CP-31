@@ -36,3 +36,12 @@ int main() {
         cout << findSmallestK(a) << "\n";
     }
 }
+Note
+   Counting the Total Number of 2s
+        The code first counts how many times the number 2 appears in the array a (totalTwos).
+   Finding the Smallest Index k
+        It iterates through the array while maintaining a count of 2s on the left (leftTwos).
+        The remaining 2s on the right are computed as rightTwos = totalTwos - leftTwos.
+        If leftTwos equals rightTwos, it returns i + 1 (1-based index of the split point).
+   Return -1 if No Valid k Exists
+        If no such index is found where leftTwos == rightTwos, it returns -1.
