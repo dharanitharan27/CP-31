@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int a,b,c,d;
+        cin>>a>>b>>c>>d;
+        if(b<=d&&c<=a+d-b) {
+			cout<<(d-b)+(a+d-b-c)<<"\n";
+		} else {
+			cout<<"-1\n";
+		}
+    }
+}
+Note
+      The value of b is always non-decreasing, and the value of a b is always non-increasing.It is possible to move 
+from (a, b) to (c, d) if and only if d > b and abcd, since the value of b is always non-decreasing and the
+value of a b is always non-increasing.If it is possible, the answer is (d - b) + ((a+db) - c). 
+One possible way is (a, b)→(a+db,d) → (c, d).
+        Another way to understand this: (a, b) (a+db, d) → (c, d) is always a valid path if it is possible 
+to move from (a, b) to (c, d). So first let aa + (db) and bd, then the answer only depends on a and c.
